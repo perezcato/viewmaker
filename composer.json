@@ -1,0 +1,13 @@
+{
+    "name": "adyns/viewmaker",
+    "description": "A laravel package for generating simple view in laravel",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Cato Perez",
+            "email": "perezcatoc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
