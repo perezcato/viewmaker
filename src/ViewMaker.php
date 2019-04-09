@@ -148,7 +148,7 @@ class ViewMaker extends Command
                 $this->error("view {$viewName} already exists");
                 exit();
             }else{
-                $create = fopen($viewName,'w');
+                $create = fopen($viewName'.blade.php','w');
                 fwrite($create,$fileText);
                 fclose($create);
                 $this->info('the file was successfully created');
