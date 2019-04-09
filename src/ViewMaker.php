@@ -106,6 +106,7 @@ class ViewMaker extends Command
         $viewName = $this->createBladeFolder($viewFile);
         $this->createBladeFile($viewName,$file_text);
 
+
         return $this->output;
     }
 
@@ -117,6 +118,7 @@ class ViewMaker extends Command
                 $results[] = "{$dir}//{$value}";
                 continue;
             }
+
             foreach ($this->findAllFiles("{$dir}//{$value}") as $file){
                 $results[] = $file;
             }
@@ -153,8 +155,6 @@ class ViewMaker extends Command
             }
 
         }
-
-
     }
 
     private function createBladeFolder($viewFile)
@@ -174,7 +174,6 @@ class ViewMaker extends Command
                     chdir($path);
                 }
             }
-
             $viewName = $dirArray[count($dirArray)-1];
         }
 
