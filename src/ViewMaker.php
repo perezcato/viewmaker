@@ -57,7 +57,7 @@ class ViewMaker extends Command
             chdir(('..//..//public//'));
             foreach ( $this->findAllFiles('css') as $value){
                 if((new \SplFileInfo($value))->getExtension() == 'css'){
-                    $value = str_replace($value,"//","/");
+                    $value = str_replace('//','/',$value);
                     $css_temp .= "<link href=\"{{asset('{$value}')}}\" rel=\"stylesheet\" /> \n";
                 }
             }
@@ -72,7 +72,7 @@ class ViewMaker extends Command
             chdir(('..//..//public//'));
             foreach ( $this->findAllFiles('js') as $value){
                 if((new \SplFileInfo($value))->getExtension() == 'js'){
-                    $value = str_replace($value,"//","/");
+                    $value = str_replace('//','/',$value);
                     $js_temp .= "<script src=\"{{asset('{$value}')}}\"></script>\n";
                 }
             }
@@ -144,7 +144,7 @@ class ViewMaker extends Command
             }
 
         }else{
-            if(file_exists( getcwd()."//". $viewName.'blade.php')){
+            if(file_exists( getcwd()."//". $viewName.'.blade.php')){
                 $this->error("view {$viewName} already exists");
                 exit();
             }else{
