@@ -25,7 +25,7 @@ A laravel package for generating view files via laravel artisan command
   <li>php artisan make:view [filename] - generate view file</li>
   <li>php artisan make:view [foldername].[filename] - generate folder then the view file</li>
   <li>php artisan make:view [filename] --extend=[filename]?[section to extend] - generate view file extending from an existing file</li>
-  <li>php artisan make:view [filename] -css -js - generate view file adding all the js and css files in the public directory</li>
+  <li>php artisan make:view [filename] -c -j - generate view file adding all the js and css files in the public directory</li>
   <li>php artisan make:view [filename],[filename] - generate multiple view file</li>
 </ul>
 
@@ -33,7 +33,7 @@ A laravel package for generating view files via laravel artisan command
 <h1>Examples</h1>
 <ul>
   <li>php artisan make:view app.index</li>
-  <li>php artisan make:view dashboard -js -css</li>
+  <li>php artisan make:view dashboard -j -c</li>
   <li>php artisan make:view app.index,sidenav,signup</li>
   <li>php artisan make:view app --extend=layouts.app?content</li>
 </ul>
